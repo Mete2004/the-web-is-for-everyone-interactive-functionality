@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styleguide.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="{{ pageClass }}"> 
+    <header>
+
+        {% render "partials/logo.liquid", 
+            mobile_logo: mobile_logo, 
+            desktop_logo: desktop_logo 
+        %}
+
+        <div class="outer-search">
+            <input type="text" name="search" placeholder="Zoek..." aria-label="Zoek">
+        </div>
+        
+        <div class="menu-button-outer">
+            <div class="menu-button" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="/">Home</a>
+            <a href="nieuw-west">Nieuw-west</a>
+            <a href="zuidoost">Zuidoost</a>
+            <a href="oost">Oost</a>
+        </nav>
+
+        <nav class="navigation">
+            <a href="nieuw-west" class="link-button">Nieuw-west</a>
+            <a href="zuidoost" class="link-button">Zuidoost</a>
+            <a href="oost" class="link-button">Oost</a>
+            <a href="archief" class="link-button">Archief</a>
+        </nav>
+    </header>
+
