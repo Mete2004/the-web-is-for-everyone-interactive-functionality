@@ -97,9 +97,16 @@ app.get('/details/:id', async function (req, res) {
     return story.id == req.params.id;
   });
 
+  const comments = await getComments();
+
+  const filteredComments = comments.filter(function(comment) {
+    return comment.story == req.params.id;
+  });
+
   res.render('details.liquid', { 
     story: story,
     categories: categories,
+    reacties: filteredComments,
     showBack: true
   });
 
