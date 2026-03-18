@@ -37,6 +37,13 @@ async function getCategories() {
   return data.data;
 }
 
+//Haalt alle comments op.
+async function getComments() {
+  const res = await fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_stories_comments");
+  const data = await res.json();
+  return data.data;
+}
+
 app.get('/', async function (req, res) {
 
   const stories = await getStories();
