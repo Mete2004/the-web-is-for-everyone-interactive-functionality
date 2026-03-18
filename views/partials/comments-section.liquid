@@ -1,1 +1,31 @@
-test
+<section class="comments-section">
+
+    <h2 class="form-titel"></h2>
+
+    <div class="outer-form">
+        <form method="POST" action="/reacties">
+            <div class="form-name">
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-message">
+                <label for="message">Reactie</label>
+                <textarea  id="message" name="message" required>
+
+                </textarea>
+            </div>
+            {% comment %} koppel aan nieuwsbericht {% endcomment %}
+              <input type="hidden" name="news_id" value="{{ news.id }}">
+
+              <button type="submit">Plaats reactie</button>
+
+        </form>
+    </div>
+
+    <h3 class="comments-titel"></h3>
+
+    <div class="outer-comments">
+
+    </div>
+
+</section>
