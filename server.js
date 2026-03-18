@@ -23,17 +23,88 @@ app.engine('liquid', engine.express())
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
+//Haalt alle stories op.
+async function getStories() {
+  const res = await fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_stories");
+  const data = await res.json();
+  return data.data;
+}
+
+//Haalt alle doelgroepen op.
+async function getCategories() {
+  const res = await fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_categories");
+  const data = await res.json();
+  return data.data;
+}
+
+
 
 console.log('Let op: Er zijn nog geen routes. Voeg hier dus eerst jouw GET en POST routes toe.')
 
-/*
-// Zie https://expressjs.com/en/5x/api.html#app.get.method over app.get()
-app.get(…, async function (request, response) {
-  
-  // Zie https://expressjs.com/en/5x/api.html#res.render over response.render()
-  response.render(…)
+app.get('/', async function (req, res) {
+
+  const stories = await getStories();
+  const categories = await getCategories();
+
+  const algemeenStory = stories
+    .filter(function(story) {
+      return story.date !== null;
+    })
+    .sort(function(a, b) {
+      return new Date(b.date) - new Date(a.date);
+    })[0];
+
+  res.render('index.liquid', { 
+    story: algemeenStory,
+    categories: categories
+  });
+
+});
+
+app.get('/nieuw-west', async function (req, res) {
+
+  const stories = await getStories();
+  const categories = await getCategories();
+
+  const filteredStories = stories.filter(function(story) {
+    return story.district === "nieuw-west";
+  });
+
+  res.render('nieuw-west.liquid', { 
+    stories: filteredStories,
+    categories: categories 
+  });
+
 })
-*/
+
+app.get('/zuidoost', async function (req, res) {
+  res.render('zuidoost.liquid')
+})
+
+app.get('/oost', async function (req, res) {
+  res.render('oost.liquid')
+})
+
+app.get('/details/:id', async function (req, res) {
+
+  const stories = await getStories();
+  const categories = await getCategories();
+
+  const story = stories.find(function(story) {
+    return story.id == req.params.id;
+  });
+
+  res.render('details.liquid', { 
+    story: story,
+    categories: categories,
+    showBack: true
+  });
+
+});
+
+app.get('/archief', async function (req, res) {
+  res.render('archief.liquid')
+})
 
 /*
 // Zie https://expressjs.com/en/5x/api.html#app.post.method over app.post()
@@ -69,6 +140,14 @@ app.post(…, async function (request, response) {
 })
 */
 
+// Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
+// Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
+app.post('/', async function (request, response) {
+  // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
+  // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
+  response.redirect(303, '/')
+})
+
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
@@ -78,4 +157,10 @@ app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), function () {
   // Toon een bericht in de console
   console.log(`Daarna kun je via http://localhost:${app.get('port')}/ jouw interactieve website bekijken.\n\nThe Web is for Everyone. Maak mooie dingen 🙂`)
+})
+
+//error page
+
+app.use((req, res) => {
+  res.status(404).render("404.liquid")
 })
