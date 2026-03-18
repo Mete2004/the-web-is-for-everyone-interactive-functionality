@@ -37,10 +37,6 @@ async function getCategories() {
   return data.data;
 }
 
-
-
-console.log('Let op: Er zijn nog geen routes. Voeg hier dus eerst jouw GET en POST routes toe.')
-
 app.get('/', async function (req, res) {
 
   const stories = await getStories();

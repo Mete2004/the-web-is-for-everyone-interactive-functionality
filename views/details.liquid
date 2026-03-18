@@ -8,6 +8,7 @@
 
     <main class="main-details">
         {% render 'partials/detail-content.liquid', story: story, categories: categories, showBack: true %}
+        {% render 'partials/comments-section.liquid' %}
     </main>
 
     {% render 'partials/foot.liquid'%}

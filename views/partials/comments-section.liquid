@@ -1,31 +1,40 @@
 <section class="comments-section">
 
-    <h2 class="form-titel"></h2>
+    <section class="section-form">
 
-    <div class="outer-form">
-        <form method="POST" action="/reacties">
-            <div class="form-name">
-                <label for="name">Naam</label>
-                <input type="text" id="name" name="name" required>
+        <h2 class="form-titel">Laat een reactie achter!</h2>
+
+        <div class="outer-form">
+            <form class="reactie-form" method="POST" action="/reacties">
+                <div class="form-name">
+                    <label for="name">Naam:</label>
+                    <input class="input-name" type="text" id="name" name="name" placeholder="Jouw naam" required>
+                </div>
+                <div class="form-message">
+                    <label for="message">Bericht:</label>
+                    <textarea class="input-message" id="message" name="message" placeholder="Typ hier je reactie..."  required></textarea>
+                </div>
+                {% comment %} koppel aan nieuwsbericht {% endcomment %}
+                <input type="hidden" name="news_id" value="{{ news.id }}">
+
+                <button class="form-button" type="submit">Reageer</button>
+
+            </form>
+        </div>
+
+    </section>
+
+    <section class="section-list">
+
+        <h3 class="comments-titel">Reacties</h3>
+
+        <div class="outer-comments">
+            <div class="comments">
+                <p class="comment-name">Mete</p>
+                <p class="comment-text">Dit is een test reactie</p>
             </div>
-            <div class="form-message">
-                <label for="message">Reactie</label>
-                <textarea  id="message" name="message" required>
+        </div>
 
-                </textarea>
-            </div>
-            {% comment %} koppel aan nieuwsbericht {% endcomment %}
-              <input type="hidden" name="news_id" value="{{ news.id }}">
-
-              <button type="submit">Plaats reactie</button>
-
-        </form>
-    </div>
-
-    <h3 class="comments-titel"></h3>
-
-    <div class="outer-comments">
-
-    </div>
+    </section>
 
 </section>
