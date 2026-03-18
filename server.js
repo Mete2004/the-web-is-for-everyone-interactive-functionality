@@ -136,6 +136,43 @@ app.post(…, async function (request, response) {
 })
 */
 
+
+app.post('/reacties', async function (request, response) {
+
+  const name = request.body.name
+  const message = request.body.message
+  const storyId = request.body.story_id
+
+  console.log('BODY:', request.body)
+
+  try {
+    await fetch(
+      'https://fdnd-agency.directus.app/items/buurtcampuskrant_stories_comments',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8'
+        },
+        body: JSON.stringify({
+          name: name,
+          comment: message,
+          story: storyId
+        })
+      }
+    )
+
+    console.log('REDIRECT NAAR:', `/details/${storyId}`)
+
+    response.redirect(303, `/details/${storyId}`)
+
+  } catch (error) {
+    console.error(error)
+    response.status(500).send('Error bij opslaan')
+  }
+
+})
+
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
