@@ -155,7 +155,7 @@ app.post(…, async function (request, response) {
 app.post('/reacties', async function (request, response) {
 
   const name = request.body.name
-  const message = request.body.message
+  const comment = request.body.comment
   const storyId = request.body.story_id
 
 
@@ -169,7 +169,7 @@ app.post('/reacties', async function (request, response) {
         },
         body: JSON.stringify({
           name: name,
-          comment: message,
+          comment: comment,
           story: storyId
         })
       }

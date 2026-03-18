@@ -433,18 +433,26 @@ header{
   align-self: flex-end;
 }
 
+.comments-titel{
+  margin: 0 0 0.5rem 0.2rem;
+}
+
 .outer-comments{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   border: 1px solid grey;
   border-radius: 1rem;
   padding: 1rem;
 }
 
-.comments{
+.comment{
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   height: auto;
   border: 1px solid black;
+  border-radius: 0.5rem;
 }
 
 
