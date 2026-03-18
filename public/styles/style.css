@@ -413,7 +413,7 @@ header{
   gap: 0.3rem;
 }
 
-.form-message{
+.form-comment{
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
@@ -423,7 +423,7 @@ header{
   padding: 0.2rem;
 }
 
-.input-message{
+.input-comment{
   height: 5rem;
 }
 

@@ -10,9 +10,9 @@
                     <label for="name">Naam:</label>
                     <input class="input-name" type="text" id="name" name="name" placeholder="Jouw naam" required>
                 </div>
-                <div class="form-message">
-                    <label for="message">Bericht:</label>
-                    <textarea class="input-message" id="message" name="message" placeholder="Typ hier je reactie..."  required></textarea>
+                <div class="form-comment">
+                    <label for="comment">Bericht:</label>
+                    <textarea class="input-comment" id="message" name="message" placeholder="Typ hier je reactie..."  required></textarea>
                 </div>
                 {% comment %} koppel aan nieuwsbericht {% endcomment %}
                 <input type="hidden" name="story_id" value="{{ story.id }}">
