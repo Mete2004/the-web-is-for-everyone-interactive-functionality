@@ -103,6 +103,7 @@ app.get('/details/:id', async function (req, res) {
     return comment.story == req.params.id;
   });
 
+
   res.render('details.liquid', { 
     story: story,
     categories: categories,
@@ -157,7 +158,6 @@ app.post('/reacties', async function (request, response) {
   const message = request.body.message
   const storyId = request.body.story_id
 
-  console.log('BODY:', request.body)
 
   try {
     await fetch(
@@ -174,8 +174,6 @@ app.post('/reacties', async function (request, response) {
         })
       }
     )
-
-    console.log('REDIRECT NAAR:', `/details/${storyId}`)
 
     response.redirect(303, `/details/${storyId}`)
 
