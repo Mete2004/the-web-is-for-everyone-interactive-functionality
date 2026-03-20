@@ -157,6 +157,7 @@ app.post('/reacties', async function (request, response) {
   const name = request.body.name
   const comment = request.body.comment
   const storyId = request.body.story_id
+  
 
 
   try {

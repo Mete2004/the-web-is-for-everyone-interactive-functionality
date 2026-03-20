@@ -453,8 +453,23 @@ header{
   height: auto;
   border: 1px solid black;
   border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
+.comment-name{
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-semibold);
+  display: inline;
+}
+
+.comment-name::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 30%;
+  background: rgba(193, 193, 193, 0.3);
+  margin-top: 5px;
+}
 
 /* 404 page */
 
