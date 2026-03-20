@@ -90,6 +90,8 @@ app.get('/oost', async function (req, res) {
 
 app.get('/details/:id', async function (req, res) {
 
+  const success = req.query.success === 'true';
+
   const stories = await getStories();
   const categories = await getCategories();
 
@@ -110,6 +112,7 @@ app.get('/details/:id', async function (req, res) {
     categories: categories,
     reacties: filteredComments,
     hasComments: hasComments,
+    success: success,
     showBack: true
   });
 
@@ -181,7 +184,7 @@ app.post('/reacties', async function (request, response) {
       }
     )
 
-    response.redirect(303, `/details/${storyId}`)
+    response.redirect(303, `/details/${storyId}?success=true`)
 
   } catch (error) {
     console.error(error)

@@ -30,6 +30,10 @@
 
         <div class="outer-comments">
 
+            {% if success %}
+                <p class="success-message">Reactie geplaatst!</p>
+            {% endif %}
+
             {% if hasComments == false %}
                 <div class="comments-empty">
                     <p class="empty-text">Er zijn nog geen reacties.</p>
