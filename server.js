@@ -103,13 +103,18 @@ app.get('/details/:id', async function (req, res) {
     return comment.story == req.params.id;
   });
 
+  const hasComments = filteredComments.length > 0;
 
   res.render('details.liquid', { 
     story: story,
     categories: categories,
     reacties: filteredComments,
+    hasComments: hasComments,
     showBack: true
   });
+
+  console.log(comments);
+  console.log(req.params.id);
 
 });
 
