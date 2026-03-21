@@ -1,5 +1,11 @@
 <section class="comments-section">
 
+    {% if success %}
+        <div class="success-message-outer">
+            <p class="success-message">Je reactie is geplaatst!</p>
+        </div>
+    {% endif %}
+
     <section class="section-form">
 
         <h2 class="form-titel">Laat een reactie achter!</h2>
@@ -29,10 +35,6 @@
         <h3 class="comments-titel">Reacties</h3>
 
         <div class="outer-comments">
-
-            {% if success %}
-                <p class="success-message">Reactie geplaatst!</p>
-            {% endif %}
 
             {% if hasComments == false %}
                 <div class="comments-empty">

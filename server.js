@@ -116,9 +116,6 @@ app.get('/details/:id', async function (req, res) {
     showBack: true
   });
 
-  console.log(comments);
-  console.log(req.params.id);
-
 });
 
 app.get('/archief', async function (req, res) {
