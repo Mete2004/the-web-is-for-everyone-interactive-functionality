@@ -165,7 +165,6 @@ app.post('/reacties', async function (request, response) {
   const storyId = request.body.story_id
   
   try {
-    throw new Error('test error')
     await fetch(
       'https://fdnd-agency.directus.app/items/buurtcampuskrant_stories_comments',
       {
@@ -181,11 +180,15 @@ app.post('/reacties', async function (request, response) {
       }
     )
 
+    if (!fetchResponse.ok) {
+      throw new Error('API request failed')
+    }
+
     response.redirect(303, `/details/${storyId}?success=true`)
 
   } catch (error) {
-    console.error(error)
-    response.redirect(303, `/details/${storyId}?error=true`)
+      console.error(error)
+      response.redirect(303, `/details/${storyId}?error=true`)
   }
 
 })
