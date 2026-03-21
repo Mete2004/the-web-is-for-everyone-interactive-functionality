@@ -91,7 +91,7 @@ app.get('/oost', async function (req, res) {
 app.get('/details/:id', async function (req, res) {
 
   const success = req.query.success === 'true';
-
+  const error = req.query.error === 'true';
   const stories = await getStories();
   const categories = await getCategories();
 
@@ -113,6 +113,7 @@ app.get('/details/:id', async function (req, res) {
     reacties: filteredComments,
     hasComments: hasComments,
     success: success,
+    error: error,
     showBack: true
   });
 
@@ -185,7 +186,7 @@ app.post('/reacties', async function (request, response) {
 
   } catch (error) {
     console.error(error)
-    response.status(500).send('Error bij opslaan')
+    response.redirect(303, `/details/${storyId}?error=true`)
   }
 
 })
