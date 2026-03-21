@@ -164,9 +164,8 @@ app.post('/reacties', async function (request, response) {
   const comment = request.body.comment
   const storyId = request.body.story_id
   
-
-
   try {
+    throw new Error('test error')
     await fetch(
       'https://fdnd-agency.directus.app/items/buurtcampuskrant_stories_comments',
       {

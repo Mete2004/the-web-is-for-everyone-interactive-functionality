@@ -8,7 +8,7 @@
 
     <main class="main-details">
         {% render 'partials/detail-content.liquid', story: story, categories: categories, showBack: true %}
-        {% render 'partials/comments-section.liquid', story: story, reacties: reacties, hasComments: hasComments, success: success %}
+        {% render 'partials/comments-section.liquid', story: story, reacties: reacties, hasComments: hasComments, success: success, error: error %}
     </main>
 
     {% render 'partials/foot.liquid'%}
