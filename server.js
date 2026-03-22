@@ -187,7 +187,6 @@ app.post('/reacties', async function (request, response) {
     response.redirect(303, `/details/${storyId}?success=true`)
 
   } catch (error) {
-      console.error(error)
       response.redirect(303, `/details/${storyId}?error=true`)
   }
 
