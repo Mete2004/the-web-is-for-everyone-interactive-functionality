@@ -35,6 +35,9 @@ header{
   width: 7rem;
   input{
     width: 95%;
+    border-radius: 0.3rem;
+    border: 1px solid gray;
+    padding: 0.1rem;
   }
 }
 
