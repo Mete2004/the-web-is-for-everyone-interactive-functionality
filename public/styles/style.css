@@ -18,7 +18,7 @@ header{
     padding: 1rem;
     position: relative;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-bottom: 2px solid rgb(195, 195, 195);
+    border-bottom: 1px solid rgb(195, 195, 195);
     place-items: center;
 }
 
@@ -508,30 +508,76 @@ header{
 
 footer{
   background: var(--bg-main);
-  place-items: center;
-  place-content: center;
-  height: 8rem;
-  border-radius: 1rem;
-  border: 2px solid var(--orange);
-}
-
-.socials{
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-top: 1px solid rgb(195, 195, 195);
+  padding: 1.4rem 1.4rem 1.4rem 1rem;
   display: flex;
   flex-direction: row;
-  width: 80%;
   justify-content: space-between;
+}
+
+.footer-logo{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 9.5rem;
+}
+
+.logo-text{
+  font-size: 17px;
+  font-weight: var(--font-weight-medium);
+}
+
+.logo-footer img{
+  width: 7rem;
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  h4{
+    margin-bottom: 0.3rem;
+    font-size: var(--text-ml);
+  }
+}
+
+.content-socials{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   li{
     list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
   }
   a{
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.3s;
     color: black;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: var(--tekst-xs);
   }
+  a:hover{
+    text-decoration-color: currentColor;
+  }
+}
+
+.content-pages{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  li{
+    list-style: none;
+  }
+  a{
+    text-decoration: underline;
+    text-decoration: transparent;
+    transition: 0.3s;
+    color: black;
+    font-size: var(--tekst-xs);
+  }
+  a:hover{
+    text-decoration: currentColor;
+  } 
 }
 
 .navigation-footer{
@@ -551,4 +597,16 @@ footer{
         border-radius: 1rem;
     }
   }
+}
+
+.nieuw-west footer{
+  border-top: 3px solid var(--main-dark-blue);
+}
+
+.zuidoost footer{
+  border-top: 3px solid var(--main-light-blue);
+}
+
+.oost footer{
+  border-top: 3px solid var(--main-orange);
 }

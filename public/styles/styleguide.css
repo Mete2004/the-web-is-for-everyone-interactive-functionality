@@ -2,13 +2,15 @@
   /* color */
   --bg-main: white;
   --orange: #f6601a;
-  --main-dark-blue: #314366;
+  --main-dark-blue: #355188;
   --main-orange: #E4822D;
-  --main-light-blue: #2F7789;
+  --main-light-blue: #00b2df;
 
   /* text */
+  --tekst-xs: 13px;
   --text-s: 14px;
   --text-m: 16px;
+  --text-ml: 18px;
   --text-l: 20px;
   --text-xl: 28px;
 

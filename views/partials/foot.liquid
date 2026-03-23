@@ -5,16 +5,37 @@
             <a href="oost" class="link-button">Oost</a>
             <a href="archief" class="link-button">Archief</a>
         </nav>
-        <ul class="socials">
-            <li>
-                <img src="/assets/icon-facebook.svg">
-                <a href="https://facebook.com" target="_blank">Facebook</a>
-            </li>
-            <li>
-                <img src="/assets/icon-instagram.svg">
-                <a href="https://instagram.com" target="_blank">Instagram</a>
-            </li>
-        </ul>
+
+        <div class="footer-logo">
+
+            {% render "partials/logo.liquid" extra_class: 'logo-footer', 
+                mobile_logo: mobile_logo, 
+                desktop_logo: desktop_logo 
+            %}
+
+            <p class="logo-text">De digitale krant van de Buurtcampus</p>
+
+        </div>
+        
+
+        <div class="footer-content">
+            <ul class="content-socials">
+                <h4 class="titel-socials">Socials</h4>
+                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+
+            <ul class="content-pages">
+                <h4 class="titel-socials">Pagina's</h4>
+                <li><a href="/" target="_blank">Home</a></li>
+                <li><a href="/nieuw-west" target="_blank">Nieuw-west</a></li>
+                <li><a href="/zuidoost" target="_blank">Zuidoost</a></li>
+                <li><a href="/oost" target="_blank">Oost</a></li>
+                <li><a href="/archief" target="_blank">Archief</a></li>
+            </ul>
+        </div>
+        
     </footer>
 
         <script src="/js/script.js"></script>
