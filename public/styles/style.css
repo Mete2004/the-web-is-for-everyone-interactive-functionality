@@ -539,7 +539,7 @@ footer{
 .subfooter{
   border-top: 1px solid rgb(231, 231, 231);
   place-items: center;
-  padding: 0.3rem;
+  padding: 0.4rem;
   p{
     color: gray;
     font-size: var(--tekst-xs);
