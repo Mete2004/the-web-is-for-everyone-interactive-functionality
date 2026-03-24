@@ -15,13 +15,13 @@
 
   <div class="card-meta">
       <div class="meta-left">
-        <p class="card-date">{{ story.date }}</p>
+        <p class="card-date">{{ story.date | date: "%d-%m-%Y"}}</p>
 
         <p class="label-district">{{ story.district }}</p>
       </div>
 
-      <a href="/details/{{ story.id }}" class="card-big-button">
-        Lees meer →
+      <a href="/details/{{ story.id }}" class="card-big-button read-more-button">
+        Lees meer
       </a>
     </div>
 

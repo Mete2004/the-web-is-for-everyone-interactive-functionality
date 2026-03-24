@@ -245,7 +245,7 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.5rem 0 0.5rem 0.8rem ;
+  padding: 0.5rem 0 0.5rem 0.7rem ;
   color: rgb(45, 45, 45);
   a{
     color: rgb(49, 49, 49);
@@ -339,6 +339,23 @@ header{
   justify-content: space-between;
 }
 
+.card-medium-button{
+  margin-top: 0.4rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/* component: read-more button */
+
+.read-more-button:after{
+  content: "→";
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.read-more-button:hover::after {
+  transform: translateX(4px);
+}
 
 /* nieuw-west.liquid */
 
