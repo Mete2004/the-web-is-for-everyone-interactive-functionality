@@ -245,7 +245,7 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.5rem 0 0.5rem 0.7rem ;
+  padding: 0.5rem 0 0.5rem 0.8rem ;
   color: rgb(45, 45, 45);
   a{
     color: rgb(49, 49, 49);
@@ -527,7 +527,7 @@ footer{
   background: var(--bg-main);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border-top: 1px solid rgb(195, 195, 195);
-  padding: 1.4rem 1.4rem 1.4rem 1rem;
+  padding: 1.4rem 1.2rem 1.4rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -572,16 +572,29 @@ footer{
     transition: 0.3s;
     color: black;
     font-size: var(--tekst-xs);
+    display: flex;
+    gap: 0.7rem;
   }
   a:hover{
     text-decoration-color: currentColor;
   }
 }
 
+.arrow-extern{
+  width: 0.5rem;
+  height: auto;
+}
+
+.arrow-link{
+  width: 0.65rem;
+  height: auto;
+}
+
 .content-pages{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 5rem;
   li{
     list-style: none;
   }
@@ -591,6 +604,8 @@ footer{
     transition: 0.3s;
     color: black;
     font-size: var(--tekst-xs);
+    display: flex;
+    justify-content: space-between;
   }
   a:hover{
     text-decoration: currentColor;
