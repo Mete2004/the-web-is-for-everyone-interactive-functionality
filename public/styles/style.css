@@ -44,7 +44,7 @@ header{
 .menu-button-outer{
   place-content: center;
   place-items: center;
-  border: 2px solid rgb(137, 137, 137);
+  border: 2px solid rgb(99, 99, 99, 0.3);
   border-radius: 0.5rem;
   height: 2.3rem;
   width: 2.3rem;
@@ -69,7 +69,7 @@ header{
 .menu-button span{
   width: 24px;
   height: 3px;
-  background: rgb(149, 149, 149);
+  background: rgb(96, 96, 96, 0.5);
 }
 
 .nieuw-west .menu-button-outer{
@@ -527,10 +527,23 @@ footer{
   background: var(--bg-main);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border-top: 1px solid rgb(195, 195, 195);
-  padding: 1.4rem 1.2rem 1.4rem 1rem;
+}
+
+.footer-wrapper{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 1.4rem 1.2rem 1rem 1rem;
+}
+
+.subfooter{
+  border-top: 1px solid rgb(231, 231, 231);
+  place-items: center;
+  padding: 0.3rem;
+  p{
+    color: gray;
+    font-size: var(--tekst-xs);
+  }
 }
 
 .footer-logo{
@@ -554,8 +567,8 @@ footer{
   flex-direction: row;
   gap: 1.5rem;
   h4{
-    margin-bottom: 0.3rem;
-    font-size: var(--text-ml);
+    margin: 0 0 0.3rem -0.2rem;
+    font-size: 1.2rem;
   }
 }
 
