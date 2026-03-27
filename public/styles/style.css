@@ -533,7 +533,7 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1.4rem 1.2rem 1rem 1rem;
+  padding: 1.6rem 1.2rem 0.8rem 1rem;
 }
 
 .subfooter{
@@ -554,7 +554,7 @@ footer{
 }
 
 .logo-text{
-  font-size: 17px;
+  font-size: 16px;
   font-weight: var(--font-weight-medium);
 }
 
@@ -567,8 +567,8 @@ footer{
   flex-direction: row;
   gap: 1.5rem;
   h4{
-    margin: 0 0 0.3rem -0.2rem;
-    font-size: 1.2rem;
+    margin: 0 0 0.5rem -0.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -584,7 +584,7 @@ footer{
     text-decoration-color: transparent;
     transition: 0.3s;
     color: black;
-    font-size: var(--tekst-xs);
+    font-size: 12px;
     display: flex;
     gap: 0.7rem;
   }
@@ -594,12 +594,12 @@ footer{
 }
 
 .arrow-extern{
-  width: 0.5rem;
+  width: 0.4rem;
   height: auto;
 }
 
 .arrow-link{
-  width: 0.65rem;
+  width: 0.55rem;
   height: auto;
 }
 
