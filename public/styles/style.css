@@ -248,19 +248,18 @@ header{
   justify-content: space-between;
   padding: 0.5rem 0 0.5rem 0.8rem ;
   color: rgb(45, 45, 45);
-  a{
-    color: rgb(49, 49, 49);
-  }
 }
 
 .meta-left{
   display: flex;
   flex-direction: row;
+  gap: 0.5rem;
 }
 
 .card-date{
-  width: 5rem;
+  width: 5.1rem;
   place-content: center;
+  font-size: var(--text-sm);
 }
 
 .card-big-button {
@@ -296,17 +295,16 @@ header{
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  padding: 0.3rem 0.5rem;
+  padding: 0.7rem 0.5rem 0.2rem 0.5rem;
   border-bottom: 1px solid #ddd;
-  border-radius: 5px;
   background: var(--bg-main);
   overflow: hidden;
 }
 
 .card-medium-outer-img{
    img{
-    width: 8rem;
-    height: 7rem;
+    width: 9rem;
+    height: 10.5rem;
     border-radius: 0.5rem;
   }
 }
@@ -321,18 +319,12 @@ header{
     font-weight: var(--intro-weight);
   }
   h2 {
-    font-size: var(--titel-medium);
+    font-size: var(--titel-small);
   }
   p {
     margin: 0.25rem 0;
     font-size: 0.9rem;
   }
-}
-
-.cards-medium{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
 .card-medium-meta{
@@ -342,12 +334,18 @@ header{
 }
 
 .card-medium-button{
-  margin-top: 0.4rem;
   text-decoration: none;
   color: rgb(0, 0, 0);
+  margin-top: 2px;
 }
 
 /* component: read-more button */
+
+.read-more-button{
+  color: rgb(49, 49, 49);
+  font-size: var(--text-sm);
+  place-content: center;
+}
 
 .read-more-button:after{
   content: "→";
@@ -362,7 +360,7 @@ header{
 /* nieuw-west.liquid */
 
 .main-nieuw-west {
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   background: var(--bg-main);
 }
 
@@ -372,7 +370,13 @@ header{
 }
 
 .section-cards {
-  margin-top: 1rem;
+  padding: 0.3rem 0;
+}
+
+.cards-medium{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* details.liquid */
@@ -391,7 +395,7 @@ header{
 .article{
   background: var(--bg-main);
   border-radius: 1rem;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 0.8rem 0 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -401,7 +405,7 @@ header{
 .back-link{
   text-decoration: none;
   color: black;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: var(--text-sm);
 }
 
@@ -431,7 +435,7 @@ header{
   padding: 1rem 0 0.2rem 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.4rem;
 }
 
 .section-form{
