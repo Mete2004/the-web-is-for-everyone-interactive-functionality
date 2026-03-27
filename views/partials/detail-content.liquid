@@ -2,11 +2,9 @@
 
         {% if showBack %}
         <a href="javascript:history.back()" class="back-link">
-            ← Terug
+             Terug naar overzicht
         </a>
         {% endif %}
-        
-        <p class="label-district">{{ story.district }}</p>
 
         {% for category in categories %}
             {% if category.id == story.categories[0] %}
@@ -14,9 +12,14 @@
             {% endif %}
         {% endfor %}
 
-        <h1>{{ story.title }}</h1>
+        <h1 class="titel-detail">{{ story.title }}</h1>
 
         <p>{{ story.intro }}</p>
+
+        <div class="div-date">
+            <p class="detail-date">{{ story.date | date: "%d-%m-%Y"}}</p>
+            <p class="label-district">{{ story.district }}</p>
+        </div>
 
         {{ story.body }}
 

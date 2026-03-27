@@ -17,8 +17,9 @@
   /* card */
 
   /* titel */
-  --titel-big: 1.3rem;
-  --titel-medium: 1.1rem;
+  --titel-big: 1.5rem;
+  --titel-medium: 1.3rem;
+  --titel-small: 1.1rem;
 
   /* intro */
   --intro-big-text: 0.85rem;
