@@ -394,7 +394,7 @@ header{
 
 .article{
   background: var(--bg-main);
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   padding: 1rem 0.8rem 0.5rem 0.8rem;
   display: flex;
   flex-direction: column;
@@ -448,7 +448,7 @@ header{
 
 .outer-form{
   border: 1px solid grey;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   padding: 1rem;
 }
 
@@ -493,7 +493,7 @@ header{
   flex-direction: column;
   gap: 0.5rem;
   border: 1px solid grey;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   padding: 1rem;
 }
 
