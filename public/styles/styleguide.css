@@ -1,4 +1,15 @@
+@font-face {
+  font-family: 'Buurtcampus-font';
+  src: url('/fonts/jouw-font.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
+  /* font */
+  --font-main: 'Buurtcampus-font', Arial, sans-serif;
+
+
   /* color */
   --bg-main: white;
   --orange: #f6601a;
@@ -9,6 +20,7 @@
   /* text */
   --tekst-xs: 13px;
   --text-s: 14px;
+  --text-sm: 15px;
   --text-m: 16px;
   --text-ml: 18px;
   --text-l: 20px;
