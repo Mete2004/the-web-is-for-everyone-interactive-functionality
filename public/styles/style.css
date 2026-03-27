@@ -415,6 +415,10 @@ header{
   margin-right: 5px;
 }
 
+.titel-detail{
+  font-size: var(--titel-big);
+}
+
 .div-date{
   display: flex;
   flex-direction: row;
@@ -423,9 +427,8 @@ header{
   padding: 0.5rem 0 0.5rem 0.2rem;
 }
 
-.titel-detail{
-  font-size: var(--titel-big);
-  font-family: var(--font-main);
+.text-detail{
+  font-size: var(--text-s);
 }
 
 
@@ -573,7 +576,7 @@ footer{
   padding: 0.4rem;
   p{
     color: gray;
-    font-size: var(--tekst-xs);
+    font-size: var(--text-xs);
   }
 }
 
@@ -647,7 +650,7 @@ footer{
     text-decoration: transparent;
     transition: 0.3s;
     color: black;
-    font-size: var(--tekst-xs);
+    font-size: var(--text-xs);
     display: flex;
     justify-content: space-between;
   }
