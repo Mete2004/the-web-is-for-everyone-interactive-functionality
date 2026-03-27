@@ -395,7 +395,7 @@ header{
 .article{
   background: var(--bg-main);
   border-radius: 1rem;
-  padding: 1rem 0.8rem 0 0.8rem;
+  padding: 1rem 0.8rem 0.5rem 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
