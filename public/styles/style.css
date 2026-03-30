@@ -17,7 +17,8 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    background: var(--bg-main);
+    background: var(--bg-main); /* fallback */
+    background: linear-gradient(white, #f5f5f5); /* enhancement */
     padding: 1rem;
     position: relative;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -113,18 +114,25 @@ header{
 }
 
 .mobile-nav {
+  display: block; /* fallback */
   position: absolute;
   top: 105%;
   right: 0;
   background: var(--bg-main);
   width: 100%;
-  display: flex;
-  flex-direction: column;
   z-index: 10;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
   border-radius: 0.8rem;
+}
+
+/* enhancement */
+@supports (display: flex) {
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.3s ease;
+  }
 }
 
 .mobile-nav a {
