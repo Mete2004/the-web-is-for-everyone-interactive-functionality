@@ -9,6 +9,9 @@
 
     <main class="main-nieuw-west">
 
+        {% render 'partials/targetgroups.liquid', 
+            selectedTargetGroup: selectedTargetGroup %}
+
         <section class="section-cards">
             <div class="cards-medium">
                 {% for story in stories %}

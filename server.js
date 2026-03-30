@@ -69,16 +69,35 @@ app.get('/nieuw-west', async function (req, res) {
   const stories = await getStories();
   const categories = await getCategories();
 
+  const selectedTargetGroup = req.query.targetgroup;
+
   const filteredStories = stories.filter(function(story) {
-    return story.district === "nieuw-west";
+
+    const isCorrectDistrict = story.district === "nieuw-west";
+    const hasTargetGroup = story.target_group !== null;
+
+    if (!selectedTargetGroup) {
+      return isCorrectDistrict && hasTargetGroup;
+    }
+
+    if (!hasTargetGroup) {
+      return false;
+    }
+
+    const isCorrectTargetGroup =
+      story.target_group.toLowerCase() === selectedTargetGroup.toLowerCase();
+
+    return isCorrectDistrict && isCorrectTargetGroup;
   });
 
   res.render('nieuw-west.liquid', { 
     stories: filteredStories,
-    categories: categories 
+    categories: categories,
+    selectedTargetGroup: selectedTargetGroup 
   });
 
-})
+});
+
 
 app.get('/zuidoost', async function (req, res) {
   res.render('zuidoost.liquid')
