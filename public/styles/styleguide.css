@@ -1,3 +1,4 @@
+/* Baseline: Widely Available */
 @font-face {
   font-family: 'Buurtcampus-font';
   src: url('/fonts/jouw-font.woff2') format('woff2');
@@ -5,19 +6,20 @@
   font-style: normal;
 }
 
+/* Baseline: Widely Available */
 :root {
-  /* font */
+  /* font */ /* Baseline: Widely Available */
   --font-main: 'Buurtcampus-font', Arial, sans-serif;
 
 
-  /* color */
+  /* color */ /* Baseline: Widely Available */
   --bg-main: white;
   --orange: #f6601a;
   --main-dark-blue: #355188;
   --main-orange: #E4822D;
   --main-light-blue: #00b2df;
 
-  /* text */
+  /* text */ /* Baseline: Widely Available */
   --text-xs: 13px;
   --text-s: 14px;
   --text-sm: 15px;
@@ -28,19 +30,19 @@
 
   /* card */
 
-  /* titel */
+  /* titel */ /* Baseline: Widely Available */
   --titel-big: 1.5rem;
   --titel-medium: 1.3rem;
   --titel-small: 1.1rem;
 
-  /* intro */
+  /* intro */ /* Baseline: Widely Available */
   --intro-big-text: 0.85rem;
   --intro-medium-text: 0.65rem;
   --intro-small-text: 0.85rem;
 
   --intro-weight: 400;
 
-  /* font-weight */
+  /* font-weight */ /* Baseline: Widely Available */
   --font-weight-light: 100;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
