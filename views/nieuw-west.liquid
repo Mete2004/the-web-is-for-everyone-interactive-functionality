@@ -1,5 +1,6 @@
     {% assign mobile_logo = "/assets/logo-compact-nieuw-west.svg" %}
     {% assign desktop_logo = "/assets/logo-lang-nieuw-west.svg" %}
+    {% assign current_district = 'nieuw-west' %}
 
     {% render 'partials/head.liquid',
         pageClass: "nieuw-west",
@@ -9,8 +10,13 @@
 
     <main class="main-nieuw-west">
 
+        <div class="titel-district">
+            <h1>Nieuw-West</h1>
+        </div>
+
         {% render 'partials/targetgroups.liquid', 
-            selectedTargetGroup: selectedTargetGroup %}
+            selectedTargetGroup: selectedTargetGroup,
+            current_district: current_district %}
 
         <section class="section-cards">
             <div class="cards-medium">
