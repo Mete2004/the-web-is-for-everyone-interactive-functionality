@@ -26,25 +26,20 @@ De website heeft een simpel en duidelijk ontwerp zodat bezoekers direct begrijpe
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
-De gebruiker kan een reactie achterlaten onder een artikel via een reactie formulier en alle reacties bekijken.
-
-
 Bezoekers kunnen via het menu in de header navigeren tussen vier verschillende pagina’s waar nieuwsartikelen worden weergegeven.
-
 Op de website kan een gebruiker:
 
-via het navigatiemenu tussen pagina’s wisselen
+- via het navigatiemenu tussen pagina’s wisselen
 
-door verschillende nieuwsartikelen bladeren
+- door verschillende nieuwsartikelen bladeren
 
-door verschillende districten filteren
+- door verschillende districten filteren
 
-door verschillende doelgroepen filteren
+- door verschillende doelgroepen filteren
 
-een artikel openen, volledig lezen, reageren en alle reacties bekijken
+- een artikel openen, volledig lezen, reageren en alle reacties bekijken
 
 Voor mobiele schermen is een hamburger menu geïmplementeerd. Wanneer de gebruiker op de knop klikt, klapt het menu uit en worden de navigatielinks zichtbaar.
-
 De website is opgebouwd volgens het mobile first principe met een one column layout. Hierdoor blijven artikelen goed leesbaar op kleinere schermen.
 
 ### User story 
