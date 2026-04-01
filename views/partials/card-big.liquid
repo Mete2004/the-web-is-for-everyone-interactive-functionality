@@ -1,11 +1,15 @@
 <div class="card-big">
 
-  <div class="card-big-outer-img">
-    <div class="card-big-badge">Laatste nieuws</div>
-    <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+  <div class="card-big-first">
+    <div class="card-big-outer-img">
+      <div class="card-big-badge">Laatste nieuws</div>
+      <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+    </div>
   </div>
+  
 
-  <div class="card-big-content">
+  <div class="card-big-second"> 
+    <div class="card-big-content">
 
     <h2>{{ story.title }}</h2>
 
@@ -24,5 +28,7 @@
         Lees meer
       </a>
     </div>
+  </div>
+  
 
 </div>
