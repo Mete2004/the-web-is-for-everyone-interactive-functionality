@@ -10,7 +10,24 @@
     <main class="main-home">
         <section class="section-home">
             <div class="card-algemeen">
-                {% render 'partials/card-big.liquid', story: story, categories: categories %}
+                
+                <div class="card-algemeen-big">
+                    {% for story in stories %}
+                    {% if forloop.first %}
+                        {% render 'partials/card-big.liquid', story: story %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="card-algemeen-small">
+                    <h3>Bekijk algemeen ➝</h3>
+
+                    {% for story in stories %}
+                    {% unless forloop.first %}
+                        {% render 'partials/card-small.liquid', story: story %}
+                    {% endunless %}
+                    {% endfor %}
+                </div>
             </div>
         </section>
     </main>
