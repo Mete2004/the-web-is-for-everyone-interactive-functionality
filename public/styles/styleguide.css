@@ -1,7 +1,7 @@
 /* Baseline: Widely Available */
 @font-face {
   font-family: 'Buurtcampus-font';
-  src: url('/fonts/jouw-font.woff2') format('woff2');
+  src: url('/fonts/BuurtcampusArial-Bold.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
@@ -15,9 +15,9 @@
   /* color */ /* Baseline: Widely Available */
   --bg-main: white;
   --orange: #f6601a;
-  --main-dark-blue: #355188;
+  --main-dark-blue: #243d70;
   --main-orange: #E4822D;
-  --main-light-blue: #00b2df;
+  --main-light-blue: #0185a5;
 
   /* text */ /* Baseline: Widely Available */
   --text-xs: 13px;
@@ -34,6 +34,9 @@
   --titel-big: 1.5rem;
   --titel-medium: 1.3rem;
   --titel-small: 1.1rem;
+  --titel-xs: 1rem;
+  --titel-xxs: 0.9rem;
+  --titel-xxxs: 0.8rem;
 
   /* intro */ /* Baseline: Widely Available */
   --intro-big-text: 0.85rem;
