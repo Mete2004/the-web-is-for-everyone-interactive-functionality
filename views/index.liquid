@@ -9,6 +9,17 @@
 
     <main class="main-home">
         <section class="section-home">
+    
+                {% if search %}
+                    <div class="info-results">
+                    {% if stories.size == 1 %}
+                        <h3>{{ stories.size }} resultaat voor "{{ search }}"</h3>
+                    {% else %}
+                        <h3>{{ stories.size }} resultaten voor "{{ search }}"</h3>
+                    {% endif %}
+                    </div>
+                {% endif %}
+            
             <div class="card-algemeen">
                 
                 <div class="card-algemeen-big">
@@ -19,8 +30,13 @@
                     {% endfor %}
                 </div>
 
+                
                 <div class="card-algemeen-small">
-                    <h3>Bekijk algemeen ➝</h3>
+                    {% if search == blank %}
+                        <h3>Bekijk algemeen ➝</h3>
+                    {% elsif search and stories.size > 1 %}
+                        <h3>Bekijk meerdere artikelen ➝</h3>
+                    {% endif %}
 
                     {% for story in stories %}
                     {% unless forloop.first %}
