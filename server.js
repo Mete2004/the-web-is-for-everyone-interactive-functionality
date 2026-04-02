@@ -48,18 +48,27 @@ app.get('/', async function (req, res) {
 
   const stories = await getStories();
   const categories = await getCategories();
+  const search = req.query.search;
 
-  const algemeenStory = stories
+  let algemeenStory = stories
     .filter(function(story) {
       return story.date !== null && story.district === "algemeen";
     })
-    .sort(function(a, b) {
+
+    if (search) {
+      algemeenStory = algemeenStory.filter(function(story) {
+        return story.title.toLowerCase().includes(search.toLowerCase());
+      });
+    }
+
+    algemeenStory = algemeenStory.sort(function(a, b) {
       return new Date(b.date) - new Date(a.date);
     });
 
   res.render('index.liquid', { 
     stories: algemeenStory,
-    categories: categories
+    categories: categories,
+    search: search
   });
 
 });
@@ -192,8 +201,7 @@ app.get('/details/:id', async function (req, res) {
     reacties: filteredComments,
     hasComments: hasComments,
     success: success,
-    error: error,
-    showBack: true
+    error: error
   });
 
 });
