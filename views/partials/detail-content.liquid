@@ -1,10 +1,8 @@
 <article class="article">
 
-        {% if showBack %}
         <a href="javascript:history.back()" class="back-link">
              Terug naar overzicht
         </a>
-        {% endif %}
 
         {% for category in categories %}
             {% if category.id == story.categories[0] %}
