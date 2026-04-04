@@ -45,20 +45,20 @@ De website is opgebouwd volgens het mobile first principe met een one column lay
 ### User story 
 #### Comment functionaliteit
 
-<img width="467" height="742" alt="image" src="https://github.com/user-attachments/assets/cc20374a-cecc-41e7-90f7-28f096a450d3" />
+<img width="250" height="482" alt="image" src="https://github.com/user-attachments/assets/cc20374a-cecc-41e7-90f7-28f096a450d3" />
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framework of library gebruikt? -->
 
 In deze applicatie heb ik gebruik gemaakt van Node.js, Express, Liquid, Directus en client-side JavaScript.
 
-**Node.js & Express** = server-side routes en data ophalen
+**Node.js & Express =** server-side routes en data ophalen
 
-**Directus** = externe database (API)
+**Directus =** externe database (API)
 
-**Liquid** = data renderen in HTML
+**Liquid =** data renderen in HTML
 
-**Client-side JavaScript** = interactie (filter/zoeken)
+**Client-side JavaScript =** interactie (filter/zoeken)
 
 De server haalt data op via Directus en stuurt dit door naar Liquid templates.
 
@@ -90,7 +90,7 @@ Hoe werkt de code:
 - Met ``filteredComments.length`` wordt gekeken of er reacties zijn
 - Als dit 0 is, dan ``hasComments = false``
 - In Liquid wordt dan een melding getoond
-<img width="370" height="401" alt="Image" src="https://github.com/user-attachments/assets/9fb3b77d-5696-40b7-9f7b-75c0881819bd" />
+<img width="250" height="" alt="Image" src="https://github.com/user-attachments/assets/9fb3b77d-5696-40b7-9f7b-75c0881819bd" />
 
 #### Succes-state:
 
@@ -101,7 +101,7 @@ Hoe werkt de code:
 - In de route wordt ``req.query.success`` uit de URL gehaald
 - Als deze ``true`` is, wordt ``success`` meegestuurd naar Liquid
 - In Liquid wordt dan een succesmelding getoond
-<img width="366" height="448" alt="Image" src="https://github.com/user-attachments/assets/ef3b23fd-2c13-4093-993d-e4a560923697" />
+<img width="250" height="482" alt="Image" src="https://github.com/user-attachments/assets/ef3b23fd-2c13-4093-993d-e4a560923697" />
 
 #### Error-state:
 
@@ -113,7 +113,7 @@ In de route wordt ``req.query.error`` uit de URL gehaald
 Als deze ``true`` is, dan wordt ``error`` meegestuurd naar Liquid
 In Liquid wordt een foutmelding getoond
 
-<img width="372" height="620" alt="Image" src="https://github.com/user-attachments/assets/d4ebd864-b9c5-44ce-9114-379e09f4f807" />
+<img width="250" height="482" alt="Image" src="https://github.com/user-attachments/assets/d4ebd864-b9c5-44ce-9114-379e09f4f807" />
 
 ## Installatie
 <!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
