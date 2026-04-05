@@ -25,7 +25,9 @@ app.set('views', './views')
 
 //Haalt alle stories op.
 async function getStories() {
+  //haalt data op 
   const res = await fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_stories");
+  //zet om in data
   const data = await res.json();
   return data.data;
 }

@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
+
 /* Baseline: Widely Available */
 body{
   background: white;
@@ -92,40 +97,6 @@ header{
   }
 }
 
-
-
-.menu-button-outer{
-  place-content: center;
-  place-items: center;
-  border: 2px solid rgb(99, 99, 99, 0.3);
-  border-radius: 0.5rem;
-  height: 2.3rem;
-  width: 2.3rem;
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-/* Baseline: Widely Available */
-.menu-button{
-  background: none;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.menu-button span{
-  width: 24px;
-  height: 3px;
-  background: rgb(96, 96, 96, 0.5);
-}
-
 .nieuw-west .menu-button-outer{
    border: 2px solid var(--main-dark-blue);
 }
@@ -162,6 +133,39 @@ header{
   border-bottom: 3px solid var(--main-orange);
 }
 
+.menu-button-outer{
+  list-style: none;
+  place-content: center;
+  place-items: center;
+  border: 2px solid rgb(99, 99, 99, 0.3);
+  border-radius: 0.5rem;
+  height: 2.3rem;
+  width: 2.3rem;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+/* Baseline: Widely Available */
+.menu-button{
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-button span{
+  width: 24px;
+  height: 3px;
+  background: rgb(96, 96, 96, 0.5);
+}
+
 .mobile-nav {
   display: block; /* fallback */
   position: absolute;
@@ -170,9 +174,9 @@ header{
   background: var(--bg-main);
   width: 100%;
   z-index: 10;
-  max-height: 0;
-  overflow: hidden;
   border-radius: 0.8rem;
+  max-height: 0; 
+  overflow: hidden;
 }
 
 /* enhancement */
@@ -185,7 +189,7 @@ header{
 
 @media (prefers-reduced-motion: no-preference) {
   .mobile-nav{
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
   }
 }
 
@@ -198,10 +202,27 @@ header{
   text-align: center;
 }
 
-/* OPEN STATE */
-.mobile-nav.open {
-  display: flex;
-  max-height: 500px;
+/* open state */
+details[open] .mobile-nav {
+  max-height: 500px; 
+}
+
+details {
+  width: fit-content;
+  border-radius: 0.5rem;
+}
+
+details::details-content {
+  block-size: 0;
+  overflow: hidden;
+
+  transition: 
+    block-size 0.3s ease,
+    content-visibility 0.3s allow-discrete;
+}
+
+details[open]::details-content {
+  block-size: auto;
 }
 
 .desktop-nav{
