@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    background: light-dark(#ffffff, black);
 }
 
 :root {
@@ -33,6 +32,9 @@ header{
     @media (min-width: 768px) {
       padding: 0rem 2rem;
     }
+    @media (prefers-color-scheme: dark) {
+      background: black;
+     }
 }
 
 .nieuw-west .logo-header img{
@@ -178,6 +180,10 @@ header{
   border-radius: 0.8rem;
   max-height: 0; 
   overflow: hidden;
+
+  @media (prefers-color-scheme: dark) {
+      background: black;
+     }
 }
 
 /* enhancement */
@@ -195,12 +201,15 @@ header{
 }
 
 .mobile-nav a {
-   color: light-dark(black, #ffffff);
   padding: 1rem;
   text-decoration: none;
   border-bottom: 1px solid #c9cbcf;
   font-weight: bold;
   text-align: center;
+  color: light-dark(black, #ffffff);
+  @media (prefers-color-scheme: dark) {
+      color: white;
+  }
 }
 
 /* open state */
@@ -388,6 +397,9 @@ details[open]::details-content {
     border-radius: 10px;
     padding-bottom: 0.5rem;
   }
+  @media (prefers-color-scheme: dark) {
+      background: black;
+  }
 }
 
 .card-big-outer-img{
@@ -453,6 +465,9 @@ details[open]::details-content {
   justify-content: space-between;
   padding: 0.5rem 0 0.5rem 0.8rem ;
   color: light-dark(rgb(49, 49, 49), #ffffff);
+  @media (prefers-color-scheme: dark) {
+      color: white;
+     }
 }
 
 .meta-left{
@@ -511,6 +526,9 @@ details[open]::details-content {
     border-radius: 0.5rem;
     padding: 0.5rem 0.5rem 0.2rem 0.5rem
   }
+  @media (prefers-color-scheme: dark) {
+      color: black;
+     }
 }
 
 .card-medium-outer-img{
@@ -526,6 +544,7 @@ details[open]::details-content {
   flex-direction: column;
   gap: 0.5rem;
   padding: 0 0 0.5rem 0.4rem;
+  color: light-dark(black, white);
   h3{
     font-size: var(--intro-medium-text);
     font-weight: var(--intro-weight);
@@ -566,6 +585,9 @@ details[open]::details-content {
   @media (min-width: 768px) {
     border-bottom: 1px solid #dcdcdc;
   }
+  @media (prefers-color-scheme: dark) {
+      background: black;
+     }
 }
 
 .card-small-outer-img{
@@ -651,10 +673,12 @@ details[open]::details-content {
 /* Baseline: Widely Available */
 /* component: read-more button */
 .read-more-button{
- 
   color: light-dark(rgb(49, 49, 49), #ffffff);
   font-size: var(--text-s);
   place-content: center;
+  @media (prefers-color-scheme: dark) {
+      color: white;
+     }
 }
 
 .read-more-button:after{
@@ -677,6 +701,9 @@ details[open]::details-content {
    @media (min-width: 768px) {
      padding: 1rem 10rem 1rem 9rem;
    }
+   @media (prefers-color-scheme: dark) {
+      color: white;
+     }
 }
 
 .titel-district{
@@ -717,6 +744,9 @@ details[open]::details-content {
   @media (min-width: 768px) {
      padding: 1rem 10rem 1rem 9rem;
    }
+   @media (prefers-color-scheme: dark) {
+      color: white;
+     }
 }
 
 /* oost.liquid */
@@ -727,6 +757,9 @@ details[open]::details-content {
   @media (min-width: 768px) {
      padding: 1rem 10rem 1rem 9rem;
    }
+   @media (prefers-color-scheme: dark) {
+      color: white;
+     }
 }
 
 /* Baseline: Widely Available */
@@ -758,6 +791,9 @@ details[open]::details-content {
     padding: 2rem 1.5rem 2rem 2rem;
     gap: 1.5rem;
   }
+  @media (prefers-color-scheme: dark) {
+      color: white;
+     }
 }
 
 .back-link{
@@ -765,6 +801,9 @@ details[open]::details-content {
   color: light-dark(black, #ffffff);
   margin-bottom: 10px;
   font-size: var(--text-sm);
+  @media (prefers-color-scheme: dark) {
+      color: white;
+     }
 }
 
 .back-link::before{
@@ -858,6 +897,9 @@ details[open]::details-content {
   @media (min-width: 768px) {
     width: 15rem;
   }
+  @media (prefers-color-scheme: dark) {
+      border-color: white;
+     }
 }
 
 .input-comment{
@@ -869,6 +911,9 @@ details[open]::details-content {
   @media (min-width: 768px) {
     height: 4rem;
   }
+  @media (prefers-color-scheme: dark) {
+      border-color: white;
+     }
 }
 
 .form-button{
@@ -1040,6 +1085,9 @@ footer{
     font-size: 12px;
     display: flex;
     gap: 0.7rem;
+    @media (prefers-color-scheme: dark) {
+      color: white;
+     }
   }
   /* enhancement */
   a:hover{
@@ -1073,6 +1121,9 @@ footer{
     font-size: var(--text-xs);
     display: flex;
     justify-content: space-between;
+    @media (prefers-color-scheme: dark) {
+      color: white;
+     }
   }
   a:hover{
     text-decoration: currentColor;
