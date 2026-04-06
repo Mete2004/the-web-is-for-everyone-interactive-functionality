@@ -1005,6 +1005,10 @@ footer{
   background: linear-gradient(white, #ebeaea); /* enhancement */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border-top: 1px solid rgb(195, 195, 195);
+  background: light-dark(#ffffff, black);
+  @media (prefers-color-scheme: dark) {
+      background: black;
+     }
 }
 
 .footer-wrapper{
